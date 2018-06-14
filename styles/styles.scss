@@ -1,0 +1,17 @@
+@import 'setup';
+
+.frame {
+    position: relative;
+    .logo-button {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 10px;
+    }
+
+    .frame-text {
+        position: absolute;
+        top: 0;
+    }
+}
+
