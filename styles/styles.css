@@ -132,7 +132,20 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+@font-face {
+  src: url(fonts/stratumno1_bold-webfont.ttf);
+  src: url(fonts/stratumno1_bold-webfont.woff);
+  src: url(fonts/stratumno1_bold-webfont.woff2);
+  font-family: 'stratumno1bold'; }
+
 img, section {
+  margin: 0;
+  padding: 0; }
+
+h1 {
+  font-family: 'stratumno1bold';
+  text-transform: uppercase;
+  color: white;
   margin: 0;
   padding: 0; }
 
@@ -142,13 +155,21 @@ main {
   overflow: hidden;
   border: 1px solid red;
   position: relative; }
-  main .frame {
-    position: absolute; }
   main .frame-1 {
     position: absolute;
     z-index: 1;
     top: 0;
     left: 0; }
+    main .frame-1 .frame-text {
+      position: absolute;
+      top: 0;
+      width: 300px;
+      font-size: 10px;
+      font-weight: lighter;
+      text-align: center;
+      z-index: 2; }
+      main .frame-1 .frame-text h1:first-of-type {
+        margin-top: 15px; }
   main .logo-button {
     position: absolute;
     bottom: 0;
@@ -175,12 +196,13 @@ main {
       text-transform: uppercase;
       font-weight: lighter;
       font-size: 10px;
-      padding: 5px 25px;
       border-radius: 2px;
       display: block;
       margin-bottom: 2px;
-      -webkit-box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.67);
-      box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.67); }
+      -webkit-box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.31);
+      box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.31);
+      width: 107px;
+      height: 26px; }
 
 .full-van {
   position: relative; }
