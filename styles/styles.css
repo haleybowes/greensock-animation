@@ -132,13 +132,30 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-.frame {
+img, section {
+  margin: 0;
+  padding: 0; }
+
+main {
+  max-height: 250px;
+  max-width: 300px;
+  overflow: hidden;
+  border: 1px solid red;
   position: relative; }
-  .frame .logo-button {
+  main .frame {
+    position: absolute; }
+  main .frame-1 {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0; }
+  main .logo-button {
     position: absolute;
     bottom: 0;
-    left: 0;
-    padding: 10px; }
-  .frame .frame-text {
-    position: absolute;
-    top: 0; }
+    width: 100%;
+    border: 1px solid red;
+    z-index: 5;
+    padding: 5px 10px; }
+
+.full-van {
+  position: relative; }

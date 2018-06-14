@@ -1,17 +1,56 @@
 @import 'setup';
 
-.frame {
+// global styles   
+
+img, section {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    max-height: 250px;
+    max-width: 300px;
+    overflow: hidden;
+    border: 1px solid red;
     position: relative;
+
+    .frame {
+        position: absolute;
+
+    }
+
+    .frame-1 {
+        position: absolute;
+        z-index: 1;
+        top:0;
+        left: 0;
+    }
+
     .logo-button {
         position: absolute;
         bottom: 0;
-        left: 0;
-        padding: 10px;
-    }
-
-    .frame-text {
-        position: absolute;
-        top: 0;
+        width: 100%;
+        border: 1px solid red;
+        z-index: 5;
+        padding: 5px 10px;
     }
 }
 
+// .frame {
+//     position: relative;
+//     .logo-button {
+//         position: absolute;
+//         bottom: 0;
+//         left: 0;
+//         padding: 10px;
+//     }
+
+//     .frame-text {
+//         position: absolute;
+//         top: 0;
+//     }
+// }
+
+.full-van {
+    position: relative;
+}
