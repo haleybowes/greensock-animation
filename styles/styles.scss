@@ -37,7 +37,9 @@ main {
         z-index: 1;
         top:0;
         left: 0;
-        .frame-text {
+    }
+
+    .frame-text {
             position: absolute;
             top: 0;
             width: 300px;
@@ -48,9 +50,12 @@ main {
         h1:first-of-type {
             margin-top: 15px;
         }
+    }
+    
 
-    }
-    }
+ 
+
+
 
 
     .logo-button {

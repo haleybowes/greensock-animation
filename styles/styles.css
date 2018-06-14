@@ -160,16 +160,16 @@ main {
     z-index: 1;
     top: 0;
     left: 0; }
-    main .frame-1 .frame-text {
-      position: absolute;
-      top: 0;
-      width: 300px;
-      font-size: 10px;
-      font-weight: lighter;
-      text-align: center;
-      z-index: 2; }
-      main .frame-1 .frame-text h1:first-of-type {
-        margin-top: 15px; }
+  main .frame-text {
+    position: absolute;
+    top: 0;
+    width: 300px;
+    font-size: 10px;
+    font-weight: lighter;
+    text-align: center;
+    z-index: 2; }
+    main .frame-text h1:first-of-type {
+      margin-top: 15px; }
   main .logo-button {
     position: absolute;
     bottom: 0;
