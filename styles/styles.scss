@@ -30,7 +30,6 @@ main {
     max-height: 250px;
     max-width: 300px;
     overflow: hidden;
-    border: 1px solid red;
     position: relative;
     .frame-1 {
         position: absolute;
@@ -50,6 +49,19 @@ main {
         h1:first-of-type {
             margin-top: 15px;
         }
+
+        .text-2, .text-3 {
+            position: relative;
+            top: 10px;
+            border: 1px solid red;
+        }
+
+        .text-4{
+            font-size: 24px;
+        }
+        .text-5 {
+            font-size: 14.5px;
+        }
     }
     
 
@@ -62,7 +74,6 @@ main {
         position: absolute;
         bottom: 0;
         width: 100%;
-        border: 1px solid red;
         z-index: 5;
         display: flex;
         justify-content: space-between;
@@ -72,22 +83,56 @@ main {
             text-decoration: none;
             background:linear-gradient(to bottom, #c61d23, #a0171c);
             color: white;
-           ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             text-transform: uppercase;
             font-weight: lighter;
             font-size: 10px;
-            // padding: 5px 25px;
             border-radius: 2px;
-            display: block;
             margin-bottom: 2px;
-            // box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.67);
             box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.31);
             width: 107px;
             height: 26px;
+            overflow: hidden;
+            position: absolute;
+            top: 50%;
+            right:-45px;
+            transform: translate(-50%, -50%);
+            transition: all ease 0.3s;
+            &:before {
+                content: '';
+                position: absolute;
+                top: -40%;
+                right: 130%;
+                width: 10px;
+                height: 200%;
+                background: rgba(white, .3);
+                transform: rotate(20deg);
+            }
+            
+            &:hover {
+                // background:lighten(background, 10%);
+                // background: lighten(#c61d23, 10%);
+                // background:linear-gradient(to bottom, #c61d23, #a0171c);
+                &:before {
+                right: -50%;
+                transition: 1s ease all;
+                }
+            }
         }  
     }
 
    
+}
+
+main:hover, main:active, main:focus {
+    .get-more {
+        &:before {
+            right: -50%;
+            transition: 1s ease all;
+        }
+    }
 }
 
 // .frame {
@@ -108,5 +153,51 @@ main {
 .full-van {
     position: relative;
 }
+
+
+
+
+
+// shiny button styles
+
+// button {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+// }
+
+
+// button {
+//   margin: 0;
+//   padding: 15px 70px;
+  
+//   outline: none;
+//   border: none;
+//   border-radius: 5px;
+//   background: lighten(crimson, 10%);
+//   color: white;
+//   overflow: hidden;
+// //   transition: 500ms ease all;
+
+//   &:before {
+//     content: '';
+//     position: absolute;
+//     overflow: hidden;
+//     top: -40%;
+//     right: 130%;
+//     width: 30px;
+//     height: 200%;
+//     background: rgba(white, .3);
+//     transform: rotate(20deg);
+//   }
+  
+//   &:hover {
+//     &:before {
+//       right: -50%;
+//       transition: 1s ease all;
+//     }
+//   }
+// }
 
 

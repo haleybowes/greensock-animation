@@ -153,7 +153,6 @@ main {
   max-height: 250px;
   max-width: 300px;
   overflow: hidden;
-  border: 1px solid red;
   position: relative; }
   main .frame-1 {
     position: absolute;
@@ -170,11 +169,18 @@ main {
     z-index: 2; }
     main .frame-text h1:first-of-type {
       margin-top: 15px; }
+    main .frame-text .text-2, main .frame-text .text-3 {
+      position: relative;
+      top: 10px;
+      border: 1px solid red; }
+    main .frame-text .text-4 {
+      font-size: 24px; }
+    main .frame-text .text-5 {
+      font-size: 14.5px; }
   main .logo-button {
     position: absolute;
     bottom: 0;
     width: 100%;
-    border: 1px solid red;
     z-index: 5;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -193,16 +199,56 @@ main {
       background: -o-linear-gradient(top, #c61d23, #a0171c);
       background: linear-gradient(to bottom, #c61d23, #a0171c);
       color: white;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
       text-transform: uppercase;
       font-weight: lighter;
       font-size: 10px;
       border-radius: 2px;
-      display: block;
       margin-bottom: 2px;
       -webkit-box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.31);
       box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.31);
       width: 107px;
-      height: 26px; }
+      height: 26px;
+      overflow: hidden;
+      position: absolute;
+      top: 50%;
+      right: -45px;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      -webkit-transition: all ease 0.3s;
+      -o-transition: all ease 0.3s;
+      transition: all ease 0.3s; }
+      main .logo-button .get-more:before {
+        content: '';
+        position: absolute;
+        top: -40%;
+        right: 130%;
+        width: 10px;
+        height: 200%;
+        background: rgba(255, 255, 255, 0.3);
+        -webkit-transform: rotate(20deg);
+        -ms-transform: rotate(20deg);
+        transform: rotate(20deg); }
+      main .logo-button .get-more:hover:before {
+        right: -50%;
+        -webkit-transition: 1s ease all;
+        -o-transition: 1s ease all;
+        transition: 1s ease all; }
+
+main:hover .get-more:before, main:active .get-more:before, main:focus .get-more:before {
+  right: -50%;
+  -webkit-transition: 1s ease all;
+  -o-transition: 1s ease all;
+  transition: 1s ease all; }
 
 .full-van {
   position: relative; }
