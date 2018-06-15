@@ -84,7 +84,7 @@ main {
         position: absolute;
         bottom: 0;
         width: 100%;
-        z-index: 5;
+        z-index: 4;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -133,7 +133,7 @@ main {
 
 main:hover, main:active, main:focus {
     .get-more {
-        box-shadow: 1px 2px 5px 0px rgba(133, 133, 133, 0.31);
+        box-shadow: 1px 2px 5px 0px rgba(176, 176, 176, 0.31);
         background:linear-gradient(to bottom, #f5252c, #c61d23);
         &:before {
             right: -50%;

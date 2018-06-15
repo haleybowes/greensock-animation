@@ -191,7 +191,7 @@ main {
     position: absolute;
     bottom: 0;
     width: 100%;
-    z-index: 5;
+    z-index: 4;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -251,8 +251,8 @@ main {
         transition: 1s ease all; }
 
 main:hover .get-more, main:active .get-more, main:focus .get-more {
-  -webkit-box-shadow: 1px 2px 5px 0px rgba(133, 133, 133, 0.31);
-  box-shadow: 1px 2px 5px 0px rgba(133, 133, 133, 0.31);
+  -webkit-box-shadow: 1px 2px 5px 0px rgba(176, 176, 176, 0.31);
+  box-shadow: 1px 2px 5px 0px rgba(176, 176, 176, 0.31);
   background: -webkit-gradient(linear, left top, left bottom, from(#f5252c), to(#c61d23));
   background: -webkit-linear-gradient(top, #f5252c, #c61d23);
   background: -o-linear-gradient(top, #f5252c, #c61d23);
