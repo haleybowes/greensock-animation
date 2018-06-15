@@ -31,11 +31,21 @@ main {
     max-width: 300px;
     overflow: hidden;
     position: relative;
+    transition: all ease 0.3s;
     .frame-1 {
         position: absolute;
         z-index: 1;
         top:0;
         left: 0;
+    }
+
+    .frame-2 {
+        .gradient {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }
     }
 
     .frame-text {
@@ -45,13 +55,16 @@ main {
             font-size: 10px;
             font-weight: lighter;
             text-align: center;
-            z-index: 2;
+            z-index: 3;
         h1:first-of-type {
             margin-top: 15px;
         }
 
-        .text-2, .text-3 {
+        .text-2, .text-3, .text-4, .text-5 {
             position: relative;
+        }
+
+        .text-2, .text-3 {
             top: 10px;
             border: 1px solid red;
         }
@@ -64,12 +77,6 @@ main {
         }
     }
     
-
- 
-
-
-
-
     .logo-button {
         position: absolute;
         bottom: 0;
@@ -78,9 +85,10 @@ main {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 10px 10px 5px 10px;
+        padding: 10px;
         .get-more {
             text-decoration: none;
+            font-family: 'stratumno1bold';
             background:linear-gradient(to bottom, #c61d23, #a0171c);
             color: white;
             display: flex;
@@ -90,16 +98,15 @@ main {
             font-weight: lighter;
             font-size: 10px;
             border-radius: 2px;
-            margin-bottom: 2px;
+            margin-bottom: 5px;
             box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.31);
             width: 107px;
             height: 26px;
             overflow: hidden;
             position: absolute;
-            top: 50%;
-            right:-45px;
+            top: 40%;
+            right:-42px;
             transform: translate(-50%, -50%);
-            transition: all ease 0.3s;
             &:before {
                 content: '';
                 position: absolute;
@@ -113,7 +120,7 @@ main {
             
             &:hover {
                 // background:lighten(background, 10%);
-                // background: lighten(#c61d23, 10%);
+                
                 // background:linear-gradient(to bottom, #c61d23, #a0171c);
                 &:before {
                 right: -50%;
@@ -128,6 +135,7 @@ main {
 
 main:hover, main:active, main:focus {
     .get-more {
+        background:linear-gradient(to bottom, #f5252c, #c61d23);
         &:before {
             right: -50%;
             transition: 1s ease all;
