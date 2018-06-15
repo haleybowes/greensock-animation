@@ -133,17 +133,21 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   box-sizing: border-box; }
 
 @font-face {
-  src: url(fonts/stratumno1_bold-webfont.ttf);
-  src: url(fonts/stratumno1_bold-webfont.woff);
-  src: url(fonts/stratumno1_bold-webfont.woff2);
-  font-family: 'stratumno1bold'; }
+  src: url(fonts/stratumNo1Medium.ttf);
+  src: url(fonts/stratumNo1Medium.woff);
+  src: url(fonts/stratumNo1Medium.woff2);
+  font-family: 'stratumno1medium'; }
 
 img, section {
   margin: 0;
   padding: 0; }
 
+sup {
+  position: relative;
+  top: -3px; }
+
 h1 {
-  font-family: 'stratumno1bold';
+  font-family: 'stratumno1medium';
   text-transform: uppercase;
   color: white;
   margin: 0;
@@ -153,10 +157,7 @@ main {
   max-height: 250px;
   max-width: 300px;
   overflow: hidden;
-  position: relative;
-  -webkit-transition: all ease 0.3s;
-  -o-transition: all ease 0.3s;
-  transition: all ease 0.3s; }
+  position: relative; }
   main .frame-1 {
     position: absolute;
     z-index: 1;
@@ -167,12 +168,13 @@ main {
     top: 0;
     left: 0;
     z-index: 2; }
+  main .frame-2 .full-van {
+    position: relative; }
   main .frame-text {
     position: absolute;
     top: 0;
     width: 300px;
     font-size: 10px;
-    font-weight: lighter;
     text-align: center;
     z-index: 3; }
     main .frame-text h1:first-of-type {
@@ -180,8 +182,7 @@ main {
     main .frame-text .text-2, main .frame-text .text-3, main .frame-text .text-4, main .frame-text .text-5 {
       position: relative; }
     main .frame-text .text-2, main .frame-text .text-3 {
-      top: 10px;
-      border: 1px solid red; }
+      top: 10px; }
     main .frame-text .text-4 {
       font-size: 24px; }
     main .frame-text .text-5 {
@@ -203,7 +204,7 @@ main {
     padding: 10px; }
     main .logo-button .get-more {
       text-decoration: none;
-      font-family: 'stratumno1bold';
+      font-family: 'stratumno1medium';
       background: -webkit-gradient(linear, left top, left bottom, from(#c61d23), to(#a0171c));
       background: -webkit-linear-gradient(top, #c61d23, #a0171c);
       background: -o-linear-gradient(top, #c61d23, #a0171c);
@@ -219,10 +220,8 @@ main {
       -ms-flex-align: center;
       align-items: center;
       text-transform: uppercase;
-      font-weight: lighter;
-      font-size: 10px;
+      font-size: 14px;
       border-radius: 2px;
-      margin-bottom: 5px;
       -webkit-box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.31);
       box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.31);
       width: 107px;
@@ -252,6 +251,8 @@ main {
         transition: 1s ease all; }
 
 main:hover .get-more, main:active .get-more, main:focus .get-more {
+  -webkit-box-shadow: 1px 2px 5px 0px rgba(133, 133, 133, 0.31);
+  box-shadow: 1px 2px 5px 0px rgba(133, 133, 133, 0.31);
   background: -webkit-gradient(linear, left top, left bottom, from(#f5252c), to(#c61d23));
   background: -webkit-linear-gradient(top, #f5252c, #c61d23);
   background: -o-linear-gradient(top, #f5252c, #c61d23);
@@ -261,6 +262,3 @@ main:hover .get-more, main:active .get-more, main:focus .get-more {
     -webkit-transition: 1s ease all;
     -o-transition: 1s ease all;
     transition: 1s ease all; }
-
-.full-van {
-  position: relative; }

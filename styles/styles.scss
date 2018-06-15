@@ -3,35 +3,37 @@
 // import fonts
 
 @font-face {
-    src: url(fonts/stratumno1_bold-webfont.ttf);
-    src: url(fonts/stratumno1_bold-webfont.woff);
-    src: url(fonts/stratumno1_bold-webfont.woff2);
-    font-family: 'stratumno1bold';
+    src: url(fonts/stratumNo1Medium.ttf);
+    src: url(fonts/stratumNo1Medium.woff);
+    src: url(fonts/stratumNo1Medium.woff2);
+    font-family: 'stratumno1medium';
 }
 
-// global styles   
+// custom styles begin
 
 img, section {
     margin: 0;
     padding: 0;
 }
 
+sup {
+    position: relative;
+    top: -3px;
+}
 
 h1 {
-    font-family: 'stratumno1bold';
+    font-family: 'stratumno1medium';
     text-transform: uppercase;
     color: white;
     margin: 0;
     padding: 0;
 }
 
-
 main {
     max-height: 250px;
     max-width: 300px;
     overflow: hidden;
     position: relative;
-    transition: all ease 0.3s;
     .frame-1 {
         position: absolute;
         z-index: 1;
@@ -46,16 +48,18 @@ main {
             left: 0;
             z-index: 2;
         }
+        .full-van {
+            position: relative;
+        }
     }
 
     .frame-text {
-            position: absolute;
-            top: 0;
-            width: 300px;
-            font-size: 10px;
-            font-weight: lighter;
-            text-align: center;
-            z-index: 3;
+        position: absolute;
+        top: 0;
+        width: 300px;
+        font-size: 10px;
+        text-align: center;
+        z-index: 3;
         h1:first-of-type {
             margin-top: 15px;
         }
@@ -66,7 +70,6 @@ main {
 
         .text-2, .text-3 {
             top: 10px;
-            border: 1px solid red;
         }
 
         .text-4{
@@ -88,17 +91,15 @@ main {
         padding: 10px;
         .get-more {
             text-decoration: none;
-            font-family: 'stratumno1bold';
+            font-family: 'stratumno1medium';
             background:linear-gradient(to bottom, #c61d23, #a0171c);
             color: white;
             display: flex;
             justify-content: center;
             align-items: center;
             text-transform: uppercase;
-            font-weight: lighter;
-            font-size: 10px;
+            font-size: 14px;
             border-radius: 2px;
-            margin-bottom: 5px;
             box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.31);
             width: 107px;
             height: 26px;
@@ -119,9 +120,6 @@ main {
             }
             
             &:hover {
-                // background:lighten(background, 10%);
-                
-                // background:linear-gradient(to bottom, #c61d23, #a0171c);
                 &:before {
                 right: -50%;
                 transition: 1s ease all;
@@ -129,12 +127,13 @@ main {
             }
         }  
     }
-
-   
 }
+
+// button glare on banner roll over
 
 main:hover, main:active, main:focus {
     .get-more {
+        box-shadow: 1px 2px 5px 0px rgba(133, 133, 133, 0.31);
         background:linear-gradient(to bottom, #f5252c, #c61d23);
         &:before {
             right: -50%;
@@ -143,69 +142,6 @@ main:hover, main:active, main:focus {
     }
 }
 
-// .frame {
-//     position: relative;
-//     .logo-button {
-//         position: absolute;
-//         bottom: 0;
-//         left: 0;
-//         padding: 10px;
-//     }
 
-//     .frame-text {
-//         position: absolute;
-//         top: 0;
-//     }
-// }
-
-.full-van {
-    position: relative;
-}
-
-
-
-
-
-// shiny button styles
-
-// button {
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-// }
-
-
-// button {
-//   margin: 0;
-//   padding: 15px 70px;
-  
-//   outline: none;
-//   border: none;
-//   border-radius: 5px;
-//   background: lighten(crimson, 10%);
-//   color: white;
-//   overflow: hidden;
-// //   transition: 500ms ease all;
-
-//   &:before {
-//     content: '';
-//     position: absolute;
-//     overflow: hidden;
-//     top: -40%;
-//     right: 130%;
-//     width: 30px;
-//     height: 200%;
-//     background: rgba(white, .3);
-//     transform: rotate(20deg);
-//   }
-  
-//   &:hover {
-//     &:before {
-//       right: -50%;
-//       transition: 1s ease all;
-//     }
-//   }
-// }
 
 
